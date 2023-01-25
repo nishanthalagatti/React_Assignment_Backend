@@ -1,0 +1,19 @@
+scalar DateTime
+
+type Query {
+  checkUserExists(email: String!, uname: String!): [User!]!
+}
+
+type Mutation {
+  signUp(name: String!, email: String!, uname: String!, passwd: String!): User
+}
+
+type User {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  email: String!
+  uname: String!
+  passwd: String!
+}
